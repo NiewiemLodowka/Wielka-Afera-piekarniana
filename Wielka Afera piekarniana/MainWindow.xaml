@@ -15,6 +15,7 @@
         <Rectangle Name="gracz" Height="99" Width="67" Fill="Red" Canvas.Top="151" Canvas.Left="110"/>
         <Rectangle Name="przeszkoda" Height="180" Width="50" Fill="Black" Canvas.Top="320" Canvas.Left="725"/>
         <Label Name="Wynik" FontSize="35" FontWeight="Bold" Content="Wynik: 0"/>
+        <TextBlock x:Name="ostatnieWyniki" Height="120" Canvas.Left="621" TextWrapping="Wrap" Text="Ostatnie Wyniki:" Canvas.Top="19" Width="129" IsEnabled="False"/>
 
     </Canvas>
 </Window>

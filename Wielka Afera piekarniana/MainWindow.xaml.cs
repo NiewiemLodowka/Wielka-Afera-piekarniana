@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.IO;
 using System.Windows.Threading;
 
 namespace SkokiPrzezPlotki
@@ -139,10 +139,26 @@ namespace SkokiPrzezPlotki
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
+            String path = "C:\\Users\\PATRYK\\source\\repos\\Wielka Afera piekarniana\\ostatnie.txt";
             if (e.Key == Key.Enter && KoniecGry == true)
             {
+                if (!File.Exists(path))
+                {
+                    File.Create(path);
+                }
+                else
+                {
+                    File.WriteAllText(path, String.Empty);
+                    File.AppendAllText(path, Convert.ToString(wynik));
+                    var napisy = File.ReadAllText(path);
+                    ostatnieWyniki.Text = "Ostatni Wynik:" + napisy;
+                }
+
                 RozpoczencieGry();
             }
+
+
+
         }
 
         private void KeyIsUp(object sender, KeyEventArgs e)
