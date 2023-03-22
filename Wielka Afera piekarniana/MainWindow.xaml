@@ -1,0 +1,20 @@
+﻿<Window x:Class="SkokiPrzezPlotki.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SkokiPrzezPlotki"
+        mc:Ignorable="d"
+        Title="Skoki przez płotki" Height="450" Width="800">
+
+    <Canvas Name ="Kanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp" Background="Aqua">
+
+        <Rectangle Name="background" Height="400" Width="1262" Fill="Aquamarine" Canvas.Left="0"/>
+        <Rectangle Name="backgroundv2" Height="400" Width="1262" Fill="LightCoral" Canvas.Left="1262"/>
+        <Rectangle Name="ziemia" Height="32" Width="800" Fill="Brown" Canvas.Top="387" Canvas.Left="0"/>
+        <Rectangle Name="gracz" Height="99" Width="67" Fill="Red" Canvas.Top="151" Canvas.Left="110"/>
+        <Rectangle Name="przeszkoda" Height="180" Width="50" Fill="Black" Canvas.Top="320" Canvas.Left="725"/>
+        <Label Name="Wynik" FontSize="35" FontWeight="Bold" Content="Wynik: 0"/>
+
+    </Canvas>
+</Window>
